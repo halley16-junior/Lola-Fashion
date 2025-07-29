@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>About</title>
+    <style>
+         .navbar-custom {
+      background-color: #ffffff;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: none;
+    }
+
+    .navbar-scrolled {
+      background-color:#f9f9f9;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-custom .nav-link {
+      color:#000000;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link:hover {
+      background-color:#000000;
+      color:#ffffff;
+      border-radius: 4px;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      transition: all 0.3s ease;
+    }
+      /* Make toggler button background black */
+.custom-toggler{
+  background-color: black;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+/* Make the hamburger icon white */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.custom-toggler:hover {
+  background-color: #222; /* slightly lighter black */
+}
+.custom-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+     .contact-section {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .contact-section h2{
+        font-size:28px;
+    }
+     .contact-link {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      border: 2px solid #000;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+      .contact-link:hover {
+      background-color: #000;
+      color: #fff;
+      border-color: #fff;
+    }
+    </style>
+</head>
+<!-- For most browsers -->
+<link rel="icon" href="./Assest/favicon.ico" type="image/x-icon">
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="./Assest/LF-removebg-preview.png" alt="Logo"> <!-- Replace with your logo path -->
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="Collections.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-5 mt-5">
+  <!---About Us-->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <!-- Image Column -->
+    <div class="col-md-6 mb-4 mb-md-0">
+      <img src="./Assest/Image woman.png" style="height:550px;" alt="img" class="custom-img">
+    </div>
+    <!-- Text Column -->
+    <div class="col-md-6">
+      <h2 class="mb-3">LOLA'S FASHION</h2>
+      <p style="font-weight:200;">Lola’s Fashion is where timeless elegance meets modern sophistication, creativity, and bold expression. We seamlessly blend the art of classic tailoring with today’s freshest trends to craft stunning, high-quality pieces that inspire confidence and empower women to look and feel their absolute best—no matter the moment.
+         At Lola’s Fashion, every collection is thoughtfully designed with passion, purpose, and personality, capturing the essence of bold femininity and the beauty of self-expression. Whether it’s graceful silhouettes, edgy accents, or effortless essentials, our styles are made to complement the diverse lifestyles and tastes of modern women.
+        From chic everyday wear to head-turning statement looks, we believe fashion should never be ordinary—it should be authentic, empowering, and unforgettable. That’s why we’re not just creating clothes—we’re redefining fashion with confidence, comfort, creativity, and undeniable class.
+    </p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!---About Us
+<div class="container py-5">
+  <div class="row align-items-center">
+    Image Column 
+    <div class="col-md-6 mb-4 mb-md-0">
+      <img src="./Assest/img 40.png" style="height:550px;" alt="LF-removebg-preview" class="custom-img">
+    </div>
+
+    Text Column 
+    <div class="col-md-6">
+      <h2 class="mb-3">LOLA'S FASHION</h2>
+      <p style="font-weight:200;">Lola’s Fashion is where timeless elegance meets modern sophistication, creativity, and bold expression. We seamlessly blend the art of classic tailoring with today’s freshest trends to craft stunning, high-quality pieces that inspire confidence and empower women to look and feel their absolute best—no matter the moment.
+         At Lola’s Fashion, every collection is thoughtfully designed with passion, purpose, and personality, capturing the essence of bold femininity and the beauty of self-expression. Whether it’s graceful silhouettes, edgy accents, or effortless essentials, our styles are made to complement the diverse lifestyles and tastes of modern women.
+        From chic everyday wear to head-turning statement looks, we believe fashion should never be ordinary—it should be authentic, empowering, and unforgettable. That’s why we’re not just creating clothes—we’re redefining fashion with confidence, comfort, creativity, and undeniable class.
+    </p>
+    </div>
+  </div>
+</div>-->
+
+<!--Contact Section-->
+  <section class="contact-section">
+    <h2>Looking For Stylish Fashion Wears and Fabrics?</h2>
+    <p>We're just a click away. Let's connect!</p>
+    <a href="contact.html" class="contact-link">Contact Us</a>
+  </section>
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-0">&copy; Lola's Fashion 2025. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('mainNavbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>

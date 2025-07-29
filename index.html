@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+     .navbar-custom {
+      background-color: #ffffff;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: none;
+    }
+
+    .navbar-scrolled {
+      background-color:#f9f9f9;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-custom .nav-link {
+      color:#000000;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link:hover {
+      background-color:#000000;
+      color:#ffffff;
+      border-radius: 4px;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+      transition: all 0.3s ease;
+    }
+    /* Make toggler button background black */
+.custom-toggler{
+  background-color: black;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+/* Make the hamburger icon white */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.custom-toggler:hover {
+  background-color: #222; /* slightly lighter black */
+}
+  .carousel-item img {
+      object-fit: cover;
+      height: 85vh;
+      width: 100%;
+    }
+
+    .carousel-caption {
+      bottom: 50%;
+      transform: translateY(50%);
+      z-index: 2;
+    }
+
+    .carousel-caption h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel-caption p {
+      font-size: 1.2rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      background-color: black;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-size: 100% 100%;
+      filter: brightness(0) invert(1);
+    }
+     /* Line-style indicators inside carousel */
+    .carousel-indicators {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 40px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-indicators .active {
+      background-color: white;
+    }
+    
+      /* Line-style indicators inside carousel 
+    .carousel-indicators {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 40px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+     .carousel-indicators .active {
+      background-color: white;
+    }*/
+
+    /*Media query Responsiveness Design*/
+     @media (max-width: 768px) {
+      .carousel-caption h1 {
+        font-size: 1.8rem;
+      }
+      .carousel-caption p {
+        font-size: 1rem;
+      }
+      
+      .carousel-indicators [data-bs-target] {
+        width: 25px;
+      }
+      }
+
+    .section-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .img-container {
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .text-section {
+      padding: 60px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .text-section h2 {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .text-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .custom-btn {
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+      padding: 10px 25px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .custom-btn:hover {
+      background-color: white;
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<!-- For most browsers -->
+<link rel="icon" href="./Assest/favicon.ico" type="image/x-icon">
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="./Assest/LF-removebg-preview.png" alt="Logo"> <!-- Replace with your logo path -->
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="Collections.html">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+<div id="homepageCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="./Assest/img201.jpg" class="d-block w-100" alt="Fashion Slide 1" />
+        <div class="carousel-caption text-white">
+          <h1>Discover Your Signature Style</h1>
+          <p>Elevate your look with timeless pieces crafted for elegance.</p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="./Assest/img205.jpg" class="d-block w-100" alt="Fashion Slide 2" />
+        <div class="carousel-caption text-white">
+          <h1>Unleash Confidence</h1>
+          <p>Fashion that empowers and inspires every day.</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="./Assest/img 50.png" class="d-block w-100" alt="Fashion Slide 3" />
+        <div class="carousel-caption text-white">
+          <h1>Timeless Beauty</h1>
+          <p>Curated looks for the modern woman.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls with transparent circle -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+   
+    <!-- Custom line indicators INSIDE the carousel -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    
+    <!-- Custom Line Indicators 
+    <div class="carousel-indicators-line mt-3">
+      <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="0" class="active" aria-current="true"  aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>-->
+  </div>
+
+
+  <!-- Section 1: Text Left, Image Right -->
+  <div class="container-fluid my-5">
+    <div class="row">
+      <!-- Text Left -->
+      <div class="col-md-6 text-section">
+        <div>
+          <h2>Discover Our Signature Style</h2>
+          <p>At Lola's Fashion, each piece is crafted to inspire confidence, sophistication, and individuality. We believe fashion is more than just clothing — it’s a powerful expression of identity and self-worth. Our collections are designed with the modern woman in mind: bold in vision, refined in taste, and unapologetically stylish.
+          From exclusive gowns tailored to make grand entrances, to effortlessly chic everyday wear, every stitch is a celebration of timeless design and forward-thinking elegance.</p>
+          <p>Elevate your wardrobe with curated pieces that reflect who you are — and who you're becoming. Let Lola’s Fashion be your canvas for classic charm and contemporary flair.</p>
+        </div>
+      </div>
+      <!-- Image Right -->
+      <div class="col-md-6 p-4">
+        <div class="img-container" style="background-image: url(./Assest/LF.png); filter: grayscale(100%);">
+          <!-- Background image only -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Image Left, Text Right -->
+  <div class="container-fluid my-5">
+    <div class="row">
+      <!-- Image Left -->
+      <div class="col-md-6 p-4">
+        <div class="img-container" style="background-image: url(./Assest/Lolas\ fashion.png); background-color: #333;">
+          <!-- Background image -->
+        </div>
+      </div>
+      <!-- Text Right -->
+      <div class="col-md-6 text-section">
+        <div>
+          <h2>Bold. Beautiful. Lola’s.</h2>
+          <p>Step into fashion redefined — where every outfit is a statement, and every stitch is made with purpose. Lola's Fashion isn't just about looking good; it's about feeling empowered and embracing your true self.</p>
+          <p>From runway to everyday, let your outfit do the talking.</p>
+          <a href="about-us.html" class="custom-btn mt-3 d-inline-block">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-0">&copy; Lola's Fashion 2025. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('mainNavbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
+</script>
+</body>
+</html>
